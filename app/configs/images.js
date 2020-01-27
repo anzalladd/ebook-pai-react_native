@@ -5,6 +5,11 @@ const images = {
   ILLUS_2: require('../assets/images/illus_2.png'),
   LOGIN: require('../assets/images/login.png'),
   REGISTER: require('../assets/images/register.png'),
+  PICTURE: require('../assets/images/profile.png'),
+  MATERI: require('../assets/images/materi.png'),
+  latihan: require('../assets/images/latihan.png'),
+  ambil: require('../assets/images/ambil.png'),
+  about: require('../assets/images/about.png'),
 };
 
 export default images;
