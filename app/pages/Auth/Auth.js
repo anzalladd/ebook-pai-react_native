@@ -16,7 +16,7 @@ const Auth = props => {
   const [isLoading, setLoading] = useState(false);
   const loginComponent = {
     title: 'SELAMAT DATANG',
-    description: 'Silahkan daftar sebelum melanjutkan',
+    description: 'Silahkan masuk sebelum melanjutkan',
   };
   const registerComponent = {
     title: 'DAFTAR',

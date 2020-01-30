@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View,ScrollView, Image} from 'react-native';
 import {
   Text,
   Header,
@@ -9,20 +9,16 @@ import {
   Right,
   Body,
   Container,
-  Content,
-  Accordion,
+  Content
 } from 'native-base';
+import {IMAGES} from '../../configs'; 
 import styles from './styles';
 
 const Materi = props => {
   const goBack = () => {
     props.navigation.goBack();
   };
-  const dataArray = [
-    {title: 'First Element', content: 'Lorem ipsum dolor sit amet'},
-    {title: 'Second Element', content: 'Lorem ipsum dolor sit amet'},
-    {title: 'Third Element', content: 'Lorem ipsum dolor sit amet'},
-  ];
+
   return (
     <Container>
       <Header style={styles.header}>
@@ -35,24 +31,56 @@ const Materi = props => {
         <Right />
       </Header>
       <Content>
+      <ScrollView>
         <View style={styles.wrapper}>
           <View style={styles.title}>
             <Text style={styles.mapel}>PPKn</Text>
             <Text style={styles.mapel}>SMA/SMK</Text>
           </View>
           <Text style={styles.titleMateri}>DEMOKRASI</Text>
-          <View style={styles.materi}>
-            <Accordion
-              dataArray={dataArray}
-              headerStyle={styles.headerAccordion}
-              animation={true}
-              expanded={true}
-              icon="arrow-down"
-              expandedIcon="arrow-up"
-              style={styles.accordion}
-            />
-          </View>
         </View>
+          <View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Pengertian Demokrasi</Text>
+          <Text style={styles.Desc}>Demokrasi berasal dari </Text>
+          <Text style={styles.Desc}>kata Demos yang memiliki </Text>
+          <Image source={IMAGES.bab1} />
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Sejarah Demokrasi</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Prinsip Demokrasi</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Ciri-ciri Pemerintahan Demokrasi</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Landasan Demokrasi di Indonesia</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Perkembangan Demokrasi di Indonesia</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Jenis Demokrasi</Text>
+        </View>
+          </View><View style={styles.BabContainer}>
+        <View style={styles.Bab}>
+          <Text style={styles.TitleBab}>Kelebihan dan Kekurangan</Text>
+        </View>
+          </View>
+          <View style={styles.BabContainer}>
+        <View style={styles.Bab9}>
+        <Text style={styles.TitleBab}>Contoh Negara Demokrasi</Text>
+        </View>
+          </View>  
+        </ScrollView>
       </Content>
     </Container>
   );

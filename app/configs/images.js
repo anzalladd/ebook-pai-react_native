@@ -10,6 +10,7 @@ const images = {
   latihan: require('../assets/images/latihan.png'),
   ambil: require('../assets/images/ambil.png'),
   about: require('../assets/images/about.png'),
+  bab1: require('../assets/images/bab1.png')
 };
 
 export default images;
