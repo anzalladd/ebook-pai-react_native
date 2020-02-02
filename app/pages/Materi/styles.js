@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     paddingRight: 17,
   },
   mapel: {
-    fontSize: 19
+    fontSize: 19,
   },
   titleMateri: {
     fontSize: 55,
@@ -26,45 +26,67 @@ const styles = StyleSheet.create({
   accordion: {
     borderWidth: 0,
   },
-  // headerAccordion: {
-  //   marginTop: 30,
-  //   height: 50,
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 0,
-  //   },
-  //   elevation: 3,
-  // },
-  Content:{
-    fontWeight:'bold'
+  Content: {
+    fontWeight: 'bold',
   },
-  BabContainer:{
-    paddingHorizontal: 21
+  BabContainer: {
+    paddingHorizontal: 21,
+    paddingBottom: 21,
   },
   Bab: {
-    backgroundColor:'#D9DFE2',
+    backgroundColor: 'white',
     marginTop: 20,
-    height: 105,
-    shadowColor: "#000",
+    shadowColor: '#000',
+    borderRadius: 10,
+    paddingTop: 7,
+    paddingLeft: 7,
+    paddingRight: 14,
+    paddingBottom: 14,
+    display: 'flex',
+    flexDirection: 'row',
     shadowOffset: {
       width: 0,
       height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    
     elevation: 5,
+    alignItems: 'center',
+  },
+  babTitle: {
+    flex: 2,
+    paddingRight: 14,
+  },
+  babImage: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
+  babTitle__title: {
+    fontSize: 15,
+    fontWeight: '500',
+    color: '#1C7690',
+  },
+  babTitle__content: {
+    fontSize: 12,
+    color: '#1C7690',
+    paddingTop: 7,
+    paddingBottom: 14,
+  },
+  babTitle__selengkapnya: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#1C7690',
+    textAlign: 'right',
   },
   TitleBab: {
     marginTop: 7,
     marginLeft: 7,
     fontSize: 16,
-    fontWeight:'bold'
+    fontWeight: 'bold',
   },
   Desc: {
-    marginLeft:10
-  }
+    marginLeft: 10,
+  },
 });
 
 export default styles;

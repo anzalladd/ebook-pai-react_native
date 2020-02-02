@@ -3,6 +3,7 @@ import SplashScreen from '../pages/SplashScreen';
 import AuthScreen from '../pages/Auth';
 import AppScreen from '../pages/App';
 import MateriScreen from '../pages/Materi';
+import DetailScreen from '../pages/Detail';
 
 export const SplashScreenStack = createStackNavigator({
   SplashScreen: {
@@ -36,8 +37,14 @@ export const AppStack = createStackNavigator(
         headerShown: false,
       },
     },
+    DetailScreen: {
+      screen: DetailScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
   },
   {
-    initialRouteName: 'MateriScreen',
+    initialRouteName: 'AppScreen',
   },
 );

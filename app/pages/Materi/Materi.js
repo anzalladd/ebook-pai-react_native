@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,ScrollView, Image} from 'react-native';
+import {View, ScrollView, Image, TouchableOpacity} from 'react-native';
 import {
   Text,
   Header,
@@ -9,14 +9,47 @@ import {
   Right,
   Body,
   Container,
-  Content
+  Content,
 } from 'native-base';
-import {IMAGES} from '../../configs'; 
+import {IMAGES} from '../../configs';
 import styles from './styles';
 
 const Materi = props => {
   const goBack = () => {
     props.navigation.goBack();
+  };
+
+  const materi = [
+    {
+      id: 1,
+      title: 'Pengertian',
+      content: 'Demokrasi berasal dari kata Demos yang memiliki',
+      image: IMAGES.bab1,
+    },
+  ];
+
+  const detailMateri = id => {
+    props.navigation.navigate('DetailScreen', {
+      id,
+    });
+  };
+
+  const renderMateri = () => {
+    const materies = materi.map(value => (
+      <View style={styles.Bab} key={value.id}>
+        <View style={styles.babTitle}>
+          <Text style={styles.babTitle__title}>{value.title}</Text>
+          <Text style={styles.babTitle__content}>{value.content}</Text>
+          <TouchableOpacity onPress={() => detailMateri(value.id)}>
+            <Text style={styles.babTitle__selengkapnya}>Baca Selengkapnya</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.babImage}>
+          <Image source={value.image} />
+        </View>
+      </View>
+    ));
+    return materies;
   };
 
   return (
@@ -31,55 +64,15 @@ const Materi = props => {
         <Right />
       </Header>
       <Content>
-      <ScrollView>
-        <View style={styles.wrapper}>
-          <View style={styles.title}>
-            <Text style={styles.mapel}>PPKn</Text>
-            <Text style={styles.mapel}>SMA/SMK</Text>
+        <ScrollView>
+          <View style={styles.wrapper}>
+            <View style={styles.title}>
+              <Text style={styles.mapel}>PPKn</Text>
+              <Text style={styles.mapel}>SMA/SMK</Text>
+            </View>
+            <Text style={styles.titleMateri}>DEMOKRASI</Text>
           </View>
-          <Text style={styles.titleMateri}>DEMOKRASI</Text>
-        </View>
-          <View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Pengertian Demokrasi</Text>
-          <Text style={styles.Desc}>Demokrasi berasal dari </Text>
-          <Text style={styles.Desc}>kata Demos yang memiliki </Text>
-          <Image source={IMAGES.bab1} />
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Sejarah Demokrasi</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Prinsip Demokrasi</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Ciri-ciri Pemerintahan Demokrasi</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Landasan Demokrasi di Indonesia</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Perkembangan Demokrasi di Indonesia</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Jenis Demokrasi</Text>
-        </View>
-          </View><View style={styles.BabContainer}>
-        <View style={styles.Bab}>
-          <Text style={styles.TitleBab}>Kelebihan dan Kekurangan</Text>
-        </View>
-          </View>
-          <View style={styles.BabContainer}>
-        <View style={styles.Bab9}>
-        <Text style={styles.TitleBab}>Contoh Negara Demokrasi</Text>
-        </View>
-          </View>  
+          <View style={styles.BabContainer}>{renderMateri()}</View>
         </ScrollView>
       </Content>
     </Container>
