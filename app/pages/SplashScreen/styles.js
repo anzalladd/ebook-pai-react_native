@@ -21,6 +21,11 @@ const styles = StyleSheet.create({
     color: COLOR.BLACK_2,
     fontSize: 18,
   },
+  powered: {
+    fontFamily: CONSTANS.FONT_BOLDI,
+    color: COLOR.BLACK_2,
+    fontSize: 14,
+  },
 });
 
 export default styles;

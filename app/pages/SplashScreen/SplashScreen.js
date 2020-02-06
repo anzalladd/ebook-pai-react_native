@@ -25,6 +25,7 @@ const SplashScreen = props => {
       <Image source={IMAGES.LOGO} />
       <Text style={styles.title}>Digital Learning</Text>
       <Text style={styles.description}>Knowledge is in your hand</Text>
+      <Text style={styles.powered}>Powered By SMK TELKOM PURWOKERTO</Text>
     </View>
   );
 };

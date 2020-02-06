@@ -1,8 +1,11 @@
 const constants = {
-  FONT_REGULAR: 'Muli-Regular',
-  FONT_MEDIUM: 'Muli-Medium',
-  FONT_SEMIBOLD: 'Muli-SemiBold',
-  FONT_BOLD: 'Muli-Bold',
+  FONT_REGULAR: 'Roboto-Regular',
+  FONT_MEDIUM: 'Roboto-Medium',
+  FONT_SEMIBOLD: 'Roboto-SemiBold',
+  FONT_BOLD: 'Roboto-Bold',
+  FONT_BOLDI: 'Roboto-BoldItalic',
+  FONT_ITALIC: 'Roboto-Italic',
+  FONT_LIGHT: 'Roboto-Light',
 
   BASE_MARGIN: 16,
   BASE_LENGTH: 20,
