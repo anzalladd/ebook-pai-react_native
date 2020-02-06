@@ -8,7 +8,7 @@ const MainNavigator = createSwitchNavigator(
     AppScreen: AppStack,
   },
   {
-    initialRouteName: 'SplashScreen',
+    initialRouteName: 'AppScreen',
   },
 );
 

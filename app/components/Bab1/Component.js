@@ -28,6 +28,7 @@ import styles from './styles';
 const Component = () => {
   return (
     <View>
+<<<<<<< HEAD
       <Text style={styles.bab1}>BAB 1</Text>
       <Text style={styles.bab}>Pengertian Demokrasi Menurut Para Ahli </Text>
       <Text style={styles.title}>Abraham Lincoln</Text>
@@ -83,6 +84,9 @@ const Component = () => {
         atau juga dapat disebut sebagai pemerintahan dari rakyat, oleh rakyat,
         dan untuk rakyat.
       </Text>
+=======
+      <Text>Bab1</Text>
+>>>>>>> 76950b96826a1fbc6e25ab414b7230ef9536071e
     </View>
   );
 };
