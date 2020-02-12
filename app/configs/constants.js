@@ -14,7 +14,9 @@ const constants = {
   TYPO_REGULAR: 18,
   TYPO_HEADER: 16,
   TYPO_CONTENT: 14,
+  TYPO_MAIN: 22,
   TYPO_SMALL: 12,
+  TYPO_TITLE: 30,
 };
 
 export default constants;

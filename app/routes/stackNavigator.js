@@ -4,6 +4,8 @@ import AuthScreen from '../pages/Auth';
 import AppScreen from '../pages/App';
 import MateriScreen from '../pages/Materi';
 import DetailScreen from '../pages/Detail';
+import LatihanScreen from '../pages/LatihanSoal';
+import ResultScreen from '../pages/Result';
 
 export const SplashScreenStack = createStackNavigator({
   SplashScreen: {
@@ -39,6 +41,18 @@ export const AppStack = createStackNavigator(
     },
     DetailScreen: {
       screen: DetailScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    LatihanScreen: {
+      screen: LatihanScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    ResultScreen: {
+      screen: ResultScreen,
       navigationOptions: {
         headerShown: false,
       },

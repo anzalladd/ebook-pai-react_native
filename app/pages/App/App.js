@@ -16,12 +16,19 @@ const App = props => {
         Authorization: `Bearer ${key}`,
       };
       const result = await SERVICES.getData(header);
-      setUser(result.data);
+      if (result.code === 200) {
+        setUser(result.data);
+      } else {
+        props.navigation.navigate('AuthScreen');
+      }
     };
     getKey();
-  }, []);
+  }, [props.navigation]);
   const goMateri = () => {
     props.navigation.navigate('MateriScreen');
+  };
+  const goLatihan = () => {
+    props.navigation.navigate('LatihanScreen');
   };
   return (
     <Content>
@@ -48,10 +55,10 @@ const App = props => {
             <Image source={IMAGES.MATERI} />
             <Text style={styles.listText}>Materi</Text>
           </TouchableOpacity>
-          <View style={styles.latihan}>
+          <TouchableOpacity style={styles.latihan} onPress={() => goLatihan()}>
             <Image source={IMAGES.latihan} />
             <Text style={styles.listText}>Latihan Soal</Text>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.rowSecond}>
           <View style={styles.ambil}>

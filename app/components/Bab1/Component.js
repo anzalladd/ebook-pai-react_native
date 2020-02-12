@@ -1,29 +1,6 @@
 import React from 'react';
 import {View, Text} from 'native-base';
 import styles from './styles';
-// import VideoPlayer from 'react-native-video-player';
-// const VIMEO_ID = '179859217';
-
-// export default class Component extends React.Component {
-//   constructor() {
-//     super();
-
-//     this.state = {
-//       video: { width: undefined, height: undefined, duration: undefined },
-//       thumbnailUrl: undefined,
-//       videoUrl: undefined,
-//     };
-//   }
-
-//   componentDidMount() {
-//     global.fetch(`https://player.vimeo.com/video/${VIMEO_ID}/config`)
-//       .then(res => res.json())
-//       .then(res => this.setState({
-//         thumbnailUrl: res.video.thumbs['640'],
-//         videoUrl: res.request.files.hls.cdns[res.request.files.hls.default_cdn].url,
-//         video: res.video,
-//       }));
-//   }
 
 const Component = () => {
   return (
