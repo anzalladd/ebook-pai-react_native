@@ -14,6 +14,7 @@ const images = {
   BENAR: require('../assets/images/benar.png'),
   SALAH: require('../assets/images/salah.png'),
   QUIZ_ICON: require('../assets/images/quiz_icon.png'),
+  KUCING: require('../assets/images/kucing.jpg'),
 };
 
 export default images;

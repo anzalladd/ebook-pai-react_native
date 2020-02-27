@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Button, Header, Content} from 'native-base';
+import {View, Text, Content} from 'native-base';
 import storage from '../../utils/storage';
 import STORAGE_KEY from '../../configs/storageKey';
 import SERVICES from '../../configs/services';
@@ -29,6 +29,12 @@ const App = props => {
   };
   const goLatihan = () => {
     props.navigation.navigate('LatihanScreen');
+  };
+  const goAbout = () => {
+    props.navigation.navigate('AboutScreen');
+  };
+  const goQuiz = () => {
+    props.navigation.navigate('QuizScreen');
   };
   return (
     <Content>
@@ -61,14 +67,14 @@ const App = props => {
           </TouchableOpacity>
         </View>
         <View style={styles.rowSecond}>
-          <View style={styles.ambil}>
+          <TouchableOpacity style={styles.ambil} onPress={() => goQuiz()}>
             <Image source={IMAGES.ambil} />
             <Text style={styles.listText}>Ambil Quiz</Text>
-          </View>
-          <View style={styles.about}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.about} onPress={() => goAbout()}>
             <Image source={IMAGES.about} />
             <Text style={styles.listText}>About Us</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </Content>
