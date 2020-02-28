@@ -8,6 +8,7 @@ import LatihanScreen from '../pages/LatihanSoal';
 import ResultScreen from '../pages/Result';
 import AboutScreen from '../pages/About';
 import QuizScreen from '../pages/Quiz';
+import ResultQuiz from '../pages/ResultQuiz';
 
 export const SplashScreenStack = createStackNavigator({
   SplashScreen: {
@@ -67,6 +68,12 @@ export const AppStack = createStackNavigator(
     },
     QuizScreen: {
       screen: QuizScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    ResultQuizScreen: {
+      screen: ResultQuiz,
       navigationOptions: {
         headerShown: false,
       },

@@ -18,6 +18,7 @@ const App = props => {
       const result = await SERVICES.getData(header);
       if (result.code === 200) {
         setUser(result.data);
+        await storage.set('userId', result.data.userId);
       } else {
         props.navigation.navigate('AuthScreen');
       }
@@ -48,11 +49,11 @@ const App = props => {
       <View style={styles.progress}>
         <View style={styles.left}>
           <Text style={styles.titleProgress}>Quiz Completion</Text>
-          <Text style={styles.descriptionProgress}>100%</Text>
+          <Text style={styles.descriptionProgress}>{user.status}</Text>
         </View>
         <View style={styles.right}>
           <Text style={styles.titleProgress}>Score</Text>
-          <Text style={styles.descriptionProgress}>42</Text>
+          <Text style={styles.descriptionProgress}>{user.nilai}</Text>
         </View>
       </View>
       <View style={styles.wrapper}>

@@ -36,7 +36,8 @@ const LatihanSoal = props => {
       const header = {
         Authorization: `Bearer ${key}`,
       };
-      const result = await SERVICES.getSoal(header);
+      const result = await SERVICES.getQuiz(header);
+      console.log(result.data);
       setListSoal(result.data);
       setLoading(false);
     };
@@ -75,7 +76,7 @@ const LatihanSoal = props => {
         setActiveJawaban(0);
         setListJawaban(newArray);
         setModal(false);
-        props.navigation.navigate('ResultScreen', {payload: listJawaban});
+        props.navigation.navigate('ResultQuizScreen', {payload: listJawaban});
       }, 1000);
     } else {
       setModal(true);
@@ -83,7 +84,7 @@ const LatihanSoal = props => {
         setActiveJawaban(0);
         setListJawaban(newArray);
         setModal(false);
-        props.navigation.navigate('ResultScreen', {payload: listJawaban});
+        props.navigation.navigate('ResultQuizScreen', {payload: listJawaban});
       }, 1000);
     }
   };
@@ -110,7 +111,7 @@ const LatihanSoal = props => {
         <View style={styles.soal}>
           <Soal
             title={listSoal[activeSoal].title}
-            pilihan={listSoal[activeSoal].pililhan}
+            pilihan={listSoal[activeSoal].pilihan}
             onClick={value => setActiveJawaban(value)}
             activeJawaban={activeJawaban}
           />
