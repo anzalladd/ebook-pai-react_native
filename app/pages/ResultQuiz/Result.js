@@ -15,6 +15,7 @@ const Result = props => {
   useEffect(() => {
     const getSoal = async () => {
       setLoading(true);
+      console.log(jawaban);
       const userId = await storage.get('userId');
       const payload = {
         jawaban,
@@ -23,6 +24,9 @@ const Result = props => {
       const key = await storage.get(STORAGE_KEY.TOKEN_LOGIN);
       const header = {
         Authorization: `Bearer ${key}`,
+        params: {
+          userId,
+        },
       };
       try {
         const result = await SERVICES.postQuiz(payload, header);
